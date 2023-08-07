@@ -19,6 +19,7 @@
 
     // colors
     --white: #fff;
+    --black: #000;
     --dark-text: #373D59;
     --light-text: #C8CCDD;
     --accent: #8C6CED;
@@ -39,6 +40,7 @@
 html {
     height: 100%;
     max-height: 100svh;
+    cursor: none;
 }
 
 body {

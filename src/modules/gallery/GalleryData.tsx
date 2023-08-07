@@ -1,8 +1,9 @@
 import { FC } from 'react'
 
 import loader from '../../assets/loader.gif'
-import { useGetAllBreedsDataQuery } from '../../services/mainAPI'
 import styles from '../../styles/index.module.scss'
+import { Cursor } from '../../common/components/Cursor'
+import { useGetAllBreedsDataQuery } from '../../services/mainAPI'
 
 import { Gallery } from './Gallery'
 
@@ -10,7 +11,7 @@ export const GalleryData: FC = () => {
   const { data: breeds, isLoading, error } = useGetAllBreedsDataQuery(null)
 
   return (
-    <div>
+    <div className={!isLoading ? 'loaded' : 'loading'}>
       {
         error
           ? <p> Breeds not found </p>
@@ -27,6 +28,7 @@ export const GalleryData: FC = () => {
               breeds && <Gallery breeds={breeds} />
             )
       }
+      {!isLoading && <Cursor />}
     </div>
   )
 }
