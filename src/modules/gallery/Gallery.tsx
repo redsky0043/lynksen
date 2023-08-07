@@ -5,7 +5,7 @@ import { Button } from '../../common/components/Button'
 import { IBreedData } from '../../types'
 
 import styles from './gallery.module.scss'
-import { Slide } from './slide'
+import { Slide } from './Slide'
 
 interface IGalleryProps {
   breeds: IBreedData[]

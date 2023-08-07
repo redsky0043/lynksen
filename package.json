@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "cp ./env/.env.dev ./.env && vite",
-    "build": "tsc && vite build",
+    "build": "cp ./env/.env.prod ./.env && tsc && vite build",
     "lint": "eslint . --ext ts,tsx",
     "preview": "vite preview"
   },

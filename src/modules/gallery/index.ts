@@ -1,1 +1,1 @@
-export { GalleryData } from './galleryData'
+export { GalleryData } from './GalleryData'

@@ -4,7 +4,7 @@ import loader from '../../assets/loader.gif'
 import { useGetAllBreedsDataQuery } from '../../services/mainAPI'
 import styles from '../../styles/index.module.scss'
 
-import { Gallery } from './gallery'
+import { Gallery } from './Gallery'
 
 export const GalleryData: FC = () => {
   const { data: breeds, isLoading, error } = useGetAllBreedsDataQuery(null)
