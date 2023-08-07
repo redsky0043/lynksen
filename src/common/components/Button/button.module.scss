@@ -11,6 +11,8 @@
     background-color: transparent;
     white-space: nowrap;
     transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+    min-width: 7rem;
+    max-width: fit-content;
 
     &::after, &::before {
         position: absolute;

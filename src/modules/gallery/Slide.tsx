@@ -81,7 +81,6 @@ export const Slide: FC<ISlideProps> = ({
           <p className={styles.galleryDescription}>
             {breed.description}
           </p>
-          <span />
           {!error ? (
             <Button
               text="Another photo"

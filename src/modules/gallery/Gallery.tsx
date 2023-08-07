@@ -22,7 +22,7 @@ export const Gallery: FC<IGalleryProps> = ({ breeds }) => {
 
     gsap.to(currentSlide, { xPercent: -100, duration: 1.5 })
 
-    setCurrentIndex(currentIndex < breedsAmount ? nextIndex : breedsAmount)
+    setCurrentIndex(nextIndex < breedsAmount - 1 ? nextIndex : breedsAmount)
   }
 
   const prevSlide = () => {
