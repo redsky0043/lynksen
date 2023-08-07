@@ -1,0 +1,1 @@
+export { GalleryData } from './galleryData'
