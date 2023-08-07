@@ -20,6 +20,7 @@ export const Slide: FC<ISlideProps> = ({
   const [backgroundColor, setBackgroundColor] = useState('')
   const [selectedBreed, setSelectedBreed] = useState<string>('')
   const [imgSRC, setImgSRS] = useState<string>(breed.image?.url)
+  // @ts-ignore
   const { data: catPhotos, error, isLoading } = useGetBreedRandomImageQuery(selectedBreed, {
     skip: !selectedBreed,
   })
