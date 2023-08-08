@@ -1,4 +1,6 @@
-import { FC, useEffect, useState } from 'react'
+import {
+  FC, useEffect, useState,
+} from 'react'
 
 import { IBreedData, ICatData } from '../../types'
 import { Button } from '../../common/components/Button'

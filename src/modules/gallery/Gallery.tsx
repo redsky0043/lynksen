@@ -53,10 +53,12 @@ export const Gallery: FC<IGalleryProps> = ({ breeds }) => {
         <Button
           text="Prev"
           callback={prevSlide}
+          disabled={currentIndex === 0}
         />
         <Button
           text="Next"
           callback={nextSlide}
+          disabled={currentIndex === breedsAmount}
         />
       </div>
     </div>

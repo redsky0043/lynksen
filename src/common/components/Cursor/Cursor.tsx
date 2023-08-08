@@ -13,11 +13,12 @@ const Cursor: FC = () => {
     gsap.to(cursorRef.current, {
       x: e.clientX - 30,
       y: e.clientY - 30,
-      duration: 1.2,
+      duration: 0.5,
     })
     gsap.to(pointRef.current, {
       x: e.clientX,
       y: e.clientY,
+      duration: 0,
     })
   }
 
