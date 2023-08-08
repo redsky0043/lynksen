@@ -8,6 +8,10 @@
     z-index: var(--zindex-cursor);
     mix-blend-mode: difference;
     pointer-events: none;
+
+    @media (max-width: 414px) {
+        display: none;
+    }
 }
 
 .point {
