@@ -45,6 +45,7 @@ export const Gallery: FC<IGalleryProps> = ({ breeds }) => {
             index={index}
             breed={breed}
             key={breed.id}
+            currentIndex={currentIndex}
             breedsAmount={breedsAmount}
           />
         ))}

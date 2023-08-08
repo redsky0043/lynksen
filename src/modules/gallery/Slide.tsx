@@ -1,6 +1,7 @@
 import {
-  FC, useEffect, useState,
+  FC, useEffect, useState, useLayoutEffect, useRef,
 } from 'react'
+import { gsap } from 'gsap'
 
 import { IBreedData, ICatData } from '../../types'
 import { Button } from '../../common/components/Button'
@@ -12,12 +13,14 @@ interface ISlideProps {
   breed: IBreedData,
   breedsAmount: number,
   index: number,
+  currentIndex: number,
 }
 
 export const Slide: FC<ISlideProps> = ({
   index,
   breed,
   breedsAmount,
+  currentIndex,
 }) => {
   const [backgroundColor, setBackgroundColor] = useState('')
   const [selectedBreed, setSelectedBreed] = useState<string>('')
@@ -26,6 +29,17 @@ export const Slide: FC<ISlideProps> = ({
   const { data: catPhotos, error, isLoading } = useGetBreedRandomImageQuery(selectedBreed, {
     skip: !selectedBreed,
   })
+
+  const boxRef = useRef()
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(boxRef.current, {
+        y: 100,
+      })
+    })
+    return () => ctx.revert()
+  }, [currentIndex])
 
   useEffect(() => {
     const randomValue = () => Math.floor(Math.random() * 155) + 100
@@ -74,7 +88,10 @@ export const Slide: FC<ISlideProps> = ({
           <p className={styles.galleryLabel}>
             Breed
           </p>
-          <p className={styles.galleryValue}>
+          <p
+            ref={boxRef}
+            className={styles.galleryValue}
+          >
             {breed.name}
           </p>
           <p className={styles.galleryLabel}>
