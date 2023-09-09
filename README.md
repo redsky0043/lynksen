@@ -1,11 +1,3 @@
-## For developers
-    - не вийшло розібратись з проблемою додавання простої анімації елементів на слайдах, перший раз зіткнувся з такими візуальними сайд ефектами
-    - лінк на запис екрана нижче:
-- https://www.loom.com/share/ab0eb7ced73b48f1801eb97124a1f52c
-
-
-
-
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
